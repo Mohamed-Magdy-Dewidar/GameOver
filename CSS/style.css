@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none !important;
+  list-style: none !important;
+  outline: none !important;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pacifico Regular"), local("Pacifico-Regular"),
+    url(https://fonts.gstatic.com/s/pacifico/v16/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2)
+      format("woff2");
+  font-display: swap;
+}
+
+
+/* ::selection
+  */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  color: #bfc1c8;
+}
+.grey{
+  color: #bfc1c8;
+}
+
+
+h4{
+  color: #bfc1c8;
+}
+.text-icon{
+  color: #bfc1c8;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+}
+body {
+ 
+  font-family: 'Comic Sans MS', cursive,sans-serif;
+  background-color: #272B30;
+}
+.home {
+  
+  min-height: 100dvh; /* Set a minimum height of 100% viewport height */
+  height: auto; /* Allow the height to grow as needed */
+  padding-bottom: 0px; /* Optional: Add padding for spacing */
+  padding-top: 0px;
+  /* Optionally, you can add more styles like margins, borders, etc. */
+}
+
+/* Header */
+
+header img{
+  max-height: 30vh;
+  object-fit: cover;
+}
+/* NavBar */
+
+
+.navbar{
+  /* margin-top: 170px; */
+  margin-top: -30px;
+  margin-left: 185px;
+  margin-right: 180px;
+  padding: 10px;
+  background-color: #3A497B;
+  border: 1px solid #333333; /* Dark outline */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Optional: Adds a subtle shadow */
+}
+
+li .active{
+  color: #009ad8 !important;
+}
+
+.nav-item{
+  font-size: 12px;
+}
+
+.nav-link{
+  color:  white;
+}
+.nav-link:hover{
+  color:  #009ad8;
+}
+
+
+
+.home .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.home .card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+ /*  filter:brightness(105%) */
+}
+
+/* Details Section */
+
+
+
+
+.gallery{
+  width: 80%;
+}
+
+.layer .inner{
+  background-image: url(./../img/5.jpg);
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+/* Loading for loader*/
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  color: #fff;
+ 
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+
+@media (max-width: 575.98px) {
+  
+  .navbar{
+    margin-top: -30px;
+    margin-left: 20px;
+    margin-right: 30px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS rules */
+ 
+  .navbar{
+    margin-top: -30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS rules */
+ 
+  .find-btn {
+    position: relative;
+    top: 6.5px;
+    left: 695px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+  .subscribe-btn {
+    position: relative;
+    top: 6.5px;
+    left: 675px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .find-btn {
+    position: relative;
+    top: 6.5px;
+    left: 830px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+  .subscribe-btn {
+    position: relative;
+    top: 6.5px;
+    left: 810px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+}
+
+
+@media (min-width: 1200px) {
+   
+    .find-btn {
+      position: relative;
+      top: 6.5px;
+      left: 1055px;
+      right: 0;
+      padding: 10px 40px;
+      color: white;
+    }
+    .subscribe-btn {
+      position: relative;
+      top: 6.5px;
+      left: 1040px;
+      right: 0;
+      padding: 10px 40px;
+      color: white;
+    }
+    .forecast_table{
+     
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+    .forecast {
+      background-color: #323544;
+      height: 95.5%;
+      border-bottom-left-radius: 8px;
+      border-top-right-radius: 0px;
+  
+      
+    }
+    .date {
+      border-top-right-radius: 0px;
+    }
+    .forecast2{
+        height: 95.5%;
+    }
+    .forecast3 {
+      background-color: #323544;
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 0px;
+      height: 95.5%;
+    }
+    .date2 {
+      border: 2px solid #2d303d;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 0px;
+    }
+  }
+  
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1400px) {
+  .find-btn {
+    position: relative;
+    top: 6.5px;
+    left: 1240px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+  .subscribe-btn {
+    position: relative;
+    top: 6.5px;
+    left: 1225px;
+    right: 0;
+    padding: 10px 40px;
+    color: white;
+  }
+  .forecast_table{
+   
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .forecast {
+    background-color: #323544;
+    height: 95.5%;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+
+    
+  }
+  .date {
+    border-top-right-radius: 0px;
+  }
+  .forecast3 {
+    background-color: #323544;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+    height: 95.5%;
+  }
+  .date2 {
+    border: 2px solid #2d303d;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 0px;
+  }
+}
